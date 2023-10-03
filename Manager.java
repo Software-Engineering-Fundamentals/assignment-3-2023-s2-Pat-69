@@ -11,11 +11,12 @@ public class Manager extends User {
     public int getEnquiryResponseID() {
         return enquiryResponseID;
     }
-
+    
     public void setEnquiryResponseID(int enquiryResponseID) {
         this.enquiryResponseID = enquiryResponseID;
     }
 
+    //gets the enquiryId from the systemEnquiry object sets isAnswered to true and prints a confirmation message.
     public void answerSystemEnquiry(SystemEnquiry systemEnquiry) {
         int enquiryID = systemEnquiry.getEnquiryID();
         systemEnquiry.setIsAnswered(true); // sets the enquiry to be answered
