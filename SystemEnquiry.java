@@ -5,7 +5,7 @@ public class SystemEnquiry extends Enquiry {
         super(enquiryID, enquiry, isAnswered);
     }
 
-
+    // gets the enquiryID and prints a descriptive confirmation.
     public void makeSystemEnquiry() {
         System.out.println("Enquiry " + getEnquiryID() + " posted to management");
     }
