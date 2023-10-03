@@ -6,8 +6,8 @@ public class SystemEnquiry extends Enquiry {
     }
 
 
-    public void postToManager() {
-        System.out.println("Enquiry " + getEnquiryID() + " posted to management")
+    public void makeSystemEnquiry() {
+        System.out.println("Enquiry " + getEnquiryID() + " posted to management");
     }
 
 }

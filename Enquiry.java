@@ -17,7 +17,7 @@ public class Enquiry {
         return enquiryID;
     }
 
-    public void setEnquiryID() {
+    public void setEnquiryID(int enquiryID) {
         this.enquiryID = enquiryID;
     }
 
@@ -25,16 +25,16 @@ public class Enquiry {
         return enquiry;
     }
 
-    public void setEnquiry() {
+    public void setEnquiry(String enquiry) {
         this.enquiry = enquiry;
     }
 
-    public Boolean getIsAnswered() {
+    public boolean getIsAnswered() {
         return isAnswered;
     }
 
-    public void setIsAnswered() {
-        this.isAnswered = isAnswered;
+    public void setIsAnswered(boolean isAnswered) {
+        this.isAnswered = false;
     }
 
 }

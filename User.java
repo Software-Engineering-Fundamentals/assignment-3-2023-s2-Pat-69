@@ -12,7 +12,7 @@ public class User {
     private Boolean isLoggedIn;
 
     // Constructor - Sets initial values for the attributes of User objects 
-    public User(String username, String password, String email, String name, String address String phoneNumber, String paymentInfo) {
+    public User(String username, String password, String email, String name, String address, String phoneNumber, String paymentInfo, Boolean isLoggedIn) {
         this.username = username;
         this.password = password;
         this.email = email;
@@ -20,7 +20,6 @@ public class User {
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.paymentInfo = paymentInfo;
-        this.enquiryID = enquiryID;
         this.isLoggedIn = isLoggedIn;
     }
 
@@ -33,7 +32,7 @@ public class User {
         this.username = username;
     }
 
-    public string getPassword() {
+    public String getPassword() {
         return password;
     }
 
@@ -77,7 +76,7 @@ public class User {
         return paymentInfo;
     }
 
-    public void setPaymentInfo(paymentInfo) {
+    public void setPaymentInfo() {
         this.paymentInfo = paymentInfo;
     }
 
@@ -85,7 +84,7 @@ public class User {
         return isLoggedIn;
     }
 
-    public void setIsloggedIn(isLoggedIn) {
+    public void setIsloggedIn() {
         this.isLoggedIn = isLoggedIn;
     }
 
@@ -95,28 +94,23 @@ public class User {
     to demonstrate a successful login, however if this was not the case, the system will prompt the user to check their
     username and password.
     */
-    public Void login(String username, String password, Boolean isloggedIn) {
+    public void login(String username, String password, Boolean isloggedIn) {
         String database_username = username;
         String database_password = password;
 
-        if (username == database_username) && (password == database_password) {
-            isloggedIn = true;
-            System.out.println("User logged in")
-        }
-        
-        else { 
+        if (!username.equals(database_username) || !password.equals(database_password)) {
             isLoggedIn = false;
             System.out.println("Please check username and password");
+        } else {
+            isLoggedIn = true;
+            System.out.println("User logged in");
         }
+
     }
 
-    public Boolean logout(Boolean isLoggedIn) {
-        isloggedIn = false;
+    public void logout(Boolean isLoggedIn) {
+        isLoggedIn = false;
         System.out.println("User logged out");
-    }
-
-    public void makeSystemEnquiry() {
-        
     }
 
 }
